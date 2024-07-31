@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useUser } from "../features/authentication/useUser";
+// import { useUser } from "../features/authentication/useUser";
 import Spinner from "./Spinner";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -14,8 +14,9 @@ const FullPage = styled.div`
 
 function ProtectedRoute({ children }) {
   const navigate = useNavigate();
-
-  const { user, isLoading, isAuthenticated } = useUser();
+  const isAuthenticated = true;
+  const isLoading = false;
+  // const { user, isLoading, isAuthenticated } = useUser();
 
   useEffect(
     function () {
